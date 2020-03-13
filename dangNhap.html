@@ -6,13 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="dangNhap.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="./index.js"></script>
   </head>
   <body>
     <div class="main">
       <div class="container">
-        <form onsubmit="submit" action="index.html" class="mainCenter", method="GET", name="form">
+        <form action="./index.html" class="mainCenter", method="POST", name="form">
           <div class="logo">
-            <a href="./index.html" class="logo">
+            <a href="" class="logo">
               <img src="./img/image.png" alt="" class="logo" />
             </a>
           </div>
@@ -39,6 +40,7 @@
                   class="matKhauDangNhap"
                   placeholder="Mật khẩu"
                 />
+                <p id="passError" style="color: red;"></p>
               </div>
               <div class="col-3">
                 <input
@@ -87,7 +89,6 @@
       </div>
     </div>
 
-    <script type="text/javascript" href="./index.js"></script>
-
+  
   </body>
 </html>

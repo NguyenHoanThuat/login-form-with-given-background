@@ -6,29 +6,26 @@ admin = {
 
 function checkForm() {
 if(document.form.tenDangNhap.value === "") {
-  alert("Vui lòng nhập lại tên đăng nhập của bạn.");
+  document.getElementById("passError").innerHTML = "Vui lòng nhập lại tên đăng nhập của bạn."; 
   document.form.tenDangNhap.focus();
   return false;
 }
 
 if(document.form.password.value === "") {
-  alert("Vui lòng nhập lại mật khẩu của bạn.");
+  document.getElementById("passError").innerHTML = "Vui lòng nhập lại mật khẩu của bạn.";
   document.form.password.focus();
   return false;
 }
 
 if(document.form.tenDangNhap.value !== admin.tenDangNhap) {
-  alert("Tên đăng nhập hoặc mật khẩu của bạn không đúng.");
+  document.getElementById("passError").innerHTML = "Tên đăng nhập hoặc mật khẩu của bạn không đúng.";
   document.form.tenDangNhap.focus();
   return false;
 }
 
 if(document.form.password.value !== admin.password) {
-  alert("Tên đăng nhập hoặc mật khẩu của bạn không đúng.");
+  document.getElementById("passError").innerHTML = "Tên đăng nhâp hoặc mật khẩu của bạn không đúng.";
   document.form.password.focus();
   return false;
 }
-}
-const submit = (event) => {
-event.preventDefault()
 }
