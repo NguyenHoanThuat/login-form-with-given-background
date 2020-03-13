@@ -6,7 +6,7 @@ admin = {
 
 function checkForm() {
 if(document.form.tenDangNhap.value === "") {
-  document.getElementById("passError").innerHTML = "Vui lòng nhập lại tên đăng nhập của bạn."; 
+  document.getElementById("passError").innerHTML = "Vui lòng nhập lại tên đăng nhập của bạn.";
   document.form.tenDangNhap.focus();
   return false;
 }
@@ -28,4 +28,18 @@ if(document.form.password.value !== admin.password) {
   document.form.password.focus();
   return false;
 }
+}
+
+function onChange() {
+  if(document.form.tenDangNhap.value === "") {
+    document.getElementById("passError").innerHTML = "Vui lòng nhập lại tên đăng nhập của bạn.";
+    document.form.tenDangNhap.focus();
+    return false;
+  }
+  
+  if(document.form.password.value === "") {
+    document.getElementById("passError").innerHTML = "Vui lòng nhập lại mật khẩu của bạn.";
+    document.form.password.focus();
+    return false;
+  }
 }
